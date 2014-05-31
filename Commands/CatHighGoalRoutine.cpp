@@ -15,6 +15,9 @@
 #include "OpenPincer.h"
 #include "StopCompressor.h"
 #include "CatUnloadPos.h"
+#include "ClosePincer.h"
+#include "CatHome.h"
+#include "Delay.h"
 
 CatHighGoalRoutine::CatHighGoalRoutine() {
 	// Add Commands here:
@@ -35,5 +38,9 @@ CatHighGoalRoutine::CatHighGoalRoutine() {
 	// arm.
 	AddParallel(new StopCompressor());
 	AddSequential(new OpenPincer());
+	AddSequential(new Delay(.3));
 	AddSequential(new CatThrowHG());
+	AddSequential(new Delay(.1));
+	AddSequential(new CatHome());
+	//AddSequential(new ClosePincer());
 }

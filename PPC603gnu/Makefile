@@ -129,6 +129,10 @@ CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fluffy/Commands/CatHighGoalRoutine
 	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
 
 
+CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fluffy/Commands/CatHome.o : $(PRJ_ROOT_DIR)/Commands/CatHome.cpp $(FORCE_FILE_BUILD)
+	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
+
+
 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fluffy/Commands/CatKill.o : $(PRJ_ROOT_DIR)/Commands/CatKill.cpp $(FORCE_FILE_BUILD)
 	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
 
@@ -150,6 +154,10 @@ CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fluffy/Commands/CatUnloadRoutine.o
 
 
 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fluffy/Commands/ClosePincer.o : $(PRJ_ROOT_DIR)/Commands/ClosePincer.cpp $(FORCE_FILE_BUILD)
+	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
+
+
+CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fluffy/Commands/Delay.o : $(PRJ_ROOT_DIR)/Commands/Delay.cpp $(FORCE_FILE_BUILD)
 	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
 
 
@@ -236,12 +244,14 @@ CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fluffy/WPILibExtensions/KomodoDriv
 OBJECTS_CommandBasedRobotTemplate = CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fluffy/Commands/AutonomousCommand.o \
 	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fluffy/Commands/CatFwdPassRoutine.o \
 	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fluffy/Commands/CatHighGoalRoutine.o \
+	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fluffy/Commands/CatHome.o \
 	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fluffy/Commands/CatKill.o \
 	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fluffy/Commands/CatThrowFwd.o \
 	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fluffy/Commands/CatThrowHG.o \
 	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fluffy/Commands/CatUnloadPos.o \
 	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fluffy/Commands/CatUnloadRoutine.o \
 	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fluffy/Commands/ClosePincer.o \
+	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fluffy/Commands/Delay.o \
 	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fluffy/Commands/DriveStraightAuto.o \
 	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fluffy/Commands/DriveStraightTele.o \
 	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fluffy/Commands/OneBallAuto.o \
@@ -318,6 +328,10 @@ CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fluffy/Commands/CatH
 	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
 
 
+CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fluffy/Commands/CatHome.o : $(PRJ_ROOT_DIR)/Commands/CatHome.cpp $(FORCE_FILE_BUILD)
+	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
+
+
 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fluffy/Commands/CatKill.o : $(PRJ_ROOT_DIR)/Commands/CatKill.cpp $(FORCE_FILE_BUILD)
 	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
 
@@ -339,6 +353,10 @@ CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fluffy/Commands/CatU
 
 
 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fluffy/Commands/ClosePincer.o : $(PRJ_ROOT_DIR)/Commands/ClosePincer.cpp $(FORCE_FILE_BUILD)
+	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
+
+
+CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fluffy/Commands/Delay.o : $(PRJ_ROOT_DIR)/Commands/Delay.cpp $(FORCE_FILE_BUILD)
 	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
 
 
@@ -425,12 +443,14 @@ CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fluffy/WPILibExtensi
 OBJECTS_CommandBassedRobotTemplate_partialImage = CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fluffy/Commands/AutonomousCommand.o \
 	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fluffy/Commands/CatFwdPassRoutine.o \
 	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fluffy/Commands/CatHighGoalRoutine.o \
+	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fluffy/Commands/CatHome.o \
 	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fluffy/Commands/CatKill.o \
 	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fluffy/Commands/CatThrowFwd.o \
 	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fluffy/Commands/CatThrowHG.o \
 	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fluffy/Commands/CatUnloadPos.o \
 	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fluffy/Commands/CatUnloadRoutine.o \
 	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fluffy/Commands/ClosePincer.o \
+	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fluffy/Commands/Delay.o \
 	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fluffy/Commands/DriveStraightAuto.o \
 	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fluffy/Commands/DriveStraightTele.o \
 	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fluffy/Commands/OneBallAuto.o \
@@ -465,25 +485,26 @@ CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/CommandBassedRobotTemplate_p
 force : 
 
 DEP_FILES := CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fluffy/Commands/AutonomousCommand.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fluffy/Commands/CatFwdPassRoutine.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fluffy/Commands/CatHighGoalRoutine.d \
-	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fluffy/Commands/CatKill.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fluffy/Commands/CatThrowFwd.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fluffy/Commands/CatThrowHG.d \
-	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fluffy/Commands/CatUnloadPos.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fluffy/Commands/CatUnloadRoutine.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fluffy/Commands/ClosePincer.d \
-	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fluffy/Commands/DriveStraightAuto.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fluffy/Commands/DriveStraightTele.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fluffy/Commands/OneBallAuto.d \
-	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fluffy/Commands/OpenPincer.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fluffy/Commands/StartCompressor.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fluffy/Commands/StopCompressor.d \
-	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fluffy/Commands/TiltDown.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fluffy/Commands/TiltUp.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fluffy/Commands/TogglePincer.d \
-	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fluffy/Commands/ToggleTilt.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fluffy/Commands/UseArcadeDriveCmd.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fluffy/OI.d \
-	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fluffy/Robot.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fluffy/RobotMap.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fluffy/Subsystems/Catapult.d \
-	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fluffy/Subsystems/CompressorSys.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fluffy/Subsystems/Drive.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fluffy/Subsystems/Pincer.d \
-	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fluffy/Subsystems/Tilt.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fluffy/WPILibExtensions/KomodoDrive.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fluffy/Commands/AutonomousCommand.d \
-	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fluffy/Commands/CatFwdPassRoutine.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fluffy/Commands/CatHighGoalRoutine.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fluffy/Commands/CatKill.d \
+	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fluffy/Commands/CatHome.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fluffy/Commands/CatKill.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fluffy/Commands/CatThrowFwd.d \
+	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fluffy/Commands/CatThrowHG.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fluffy/Commands/CatUnloadPos.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fluffy/Commands/CatUnloadRoutine.d \
+	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fluffy/Commands/ClosePincer.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fluffy/Commands/Delay.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fluffy/Commands/DriveStraightAuto.d \
+	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fluffy/Commands/DriveStraightTele.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fluffy/Commands/OneBallAuto.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fluffy/Commands/OpenPincer.d \
+	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fluffy/Commands/StartCompressor.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fluffy/Commands/StopCompressor.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fluffy/Commands/TiltDown.d \
+	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fluffy/Commands/TiltUp.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fluffy/Commands/TogglePincer.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fluffy/Commands/ToggleTilt.d \
+	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fluffy/Commands/UseArcadeDriveCmd.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fluffy/OI.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fluffy/Robot.d \
+	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fluffy/RobotMap.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fluffy/Subsystems/Catapult.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fluffy/Subsystems/CompressorSys.d \
+	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fluffy/Subsystems/Drive.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fluffy/Subsystems/Pincer.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fluffy/Subsystems/Tilt.d \
+	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/Fluffy/WPILibExtensions/KomodoDrive.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fluffy/Commands/AutonomousCommand.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fluffy/Commands/CatFwdPassRoutine.d \
+	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fluffy/Commands/CatHighGoalRoutine.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fluffy/Commands/CatHome.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fluffy/Commands/CatKill.d \
 	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fluffy/Commands/CatThrowFwd.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fluffy/Commands/CatThrowHG.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fluffy/Commands/CatUnloadPos.d \
-	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fluffy/Commands/CatUnloadRoutine.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fluffy/Commands/ClosePincer.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fluffy/Commands/DriveStraightAuto.d \
-	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fluffy/Commands/DriveStraightTele.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fluffy/Commands/OneBallAuto.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fluffy/Commands/OpenPincer.d \
-	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fluffy/Commands/StartCompressor.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fluffy/Commands/StopCompressor.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fluffy/Commands/TiltDown.d \
-	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fluffy/Commands/TiltUp.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fluffy/Commands/TogglePincer.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fluffy/Commands/ToggleTilt.d \
-	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fluffy/Commands/UseArcadeDriveCmd.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fluffy/OI.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fluffy/Robot.d \
-	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fluffy/RobotMap.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fluffy/Subsystems/Catapult.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fluffy/Subsystems/CompressorSys.d \
-	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fluffy/Subsystems/Drive.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fluffy/Subsystems/Pincer.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fluffy/Subsystems/Tilt.d \
-	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fluffy/WPILibExtensions/KomodoDrive.d
+	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fluffy/Commands/CatUnloadRoutine.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fluffy/Commands/ClosePincer.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fluffy/Commands/Delay.d \
+	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fluffy/Commands/DriveStraightAuto.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fluffy/Commands/DriveStraightTele.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fluffy/Commands/OneBallAuto.d \
+	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fluffy/Commands/OpenPincer.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fluffy/Commands/StartCompressor.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fluffy/Commands/StopCompressor.d \
+	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fluffy/Commands/TiltDown.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fluffy/Commands/TiltUp.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fluffy/Commands/TogglePincer.d \
+	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fluffy/Commands/ToggleTilt.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fluffy/Commands/UseArcadeDriveCmd.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fluffy/OI.d \
+	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fluffy/Robot.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fluffy/RobotMap.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fluffy/Subsystems/Catapult.d \
+	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fluffy/Subsystems/CompressorSys.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fluffy/Subsystems/Drive.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fluffy/Subsystems/Pincer.d \
+	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fluffy/Subsystems/Tilt.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/Fluffy/WPILibExtensions/KomodoDrive.d
 -include $(DEP_FILES)
 
 

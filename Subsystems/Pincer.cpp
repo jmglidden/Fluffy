@@ -41,7 +41,7 @@ void Pincer::TogglePinch(){
 			Close();
 			break;
 	case DoubleSolenoid::kOff:
-			Open();
+			Close();
 			break;
 	default:
 			Off();
