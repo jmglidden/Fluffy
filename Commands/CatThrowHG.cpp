@@ -34,7 +34,7 @@ void CatThrowHG::Execute() {
 }
 // Make this return true when this Command no longer needs to run execute()
 bool CatThrowHG::IsFinished() {
-	return (Robot::IsDisabled || Robot::catapult->OnTarget());//GetPosition()>Robot::catapult->GetSetpoint();
+	return (Robot::IsDisabled() || Robot::catapult->OnTarget());//GetPosition()>Robot::catapult->GetSetpoint();
 }
 // Called once after isFinished returns true
 void CatThrowHG::End() {
