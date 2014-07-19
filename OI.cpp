@@ -39,18 +39,18 @@ OI::OI() {
 	
 	cStick = new Joystick(1);
 	
-	catFwdPass3 = new JoystickButton(cStick, 3);
+	catFwdPass3 = new JoystickButton(rStick, 3);
 	catFwdPass3->WhenPressed(new CatFwdPassRoutine());
-	catHG1 = new JoystickButton(cStick, 1);
+	catHG1 = new JoystickButton(rStick, 1);
 	catHG1->WhenPressed(new CatHighGoalRoutine());
-	catUnload2 = new JoystickButton(cStick, 2);
+	catUnload2 = new JoystickButton(rStick, 2);
 	catUnload2->WhenPressed(new CatUnloadRoutine());
-	tilt5 = new JoystickButton(cStick, 5);
+	tilt5 = new JoystickButton(rStick, 5);
 	tilt5->WhenPressed(new ToggleTilt());
-	pinch6 = new JoystickButton(cStick, 6);
+	pinch6 = new JoystickButton(rStick, 6);
 	pinch6->WhenPressed(new TogglePincer());
 	lStick = new Joystick(2);
-	
+		
      
         // SmartDashboard Buttons
 	SmartDashboard::PutData("TogglePincer", new TogglePincer());
