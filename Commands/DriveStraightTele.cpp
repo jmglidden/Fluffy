@@ -27,8 +27,8 @@ void DriveStraightTele::Initialize() {
 }
 // Called repeatedly when this Command is scheduled to run
 void DriveStraightTele::Execute() {
-	float spd = lStick->GetRawAxis(2)*-1; // Modified for LTB Demo //(Joystick::kZAxis)*-1;
-	float trn = lStick->GetRawAxis(4); // Modified for LTB Demo //(Joystick::kYAxis);
+	float spd = lStick->GetRawAxis(Joystick::kZAxis)*-1; // Modified for LTB Demo //(2)*-.7;
+	float trn = lStick->GetRawAxis(Joystick::kYAxis); // Modified for LTB Demo //(4)*.7;
 	Robot::drive->UseKomodoDrive(spd, trn);
 }
 // Make this return true when this Command no longer needs to run execute()
